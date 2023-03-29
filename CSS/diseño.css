@@ -1,0 +1,21 @@
+.todo{
+    background-color: darkslateblue;
+}
+.titulo{
+    background-color: rebeccapurple;
+    width: 50%;
+    height: 60px;
+}
+.subtitulo{
+    background-color: darkorchid;
+    width: 70%;
+    height: 60px;
+}
+#navbarTogglerDemo01{
+    background-color: cadetblue;
+}
+footer{
+    background-color: steelblue;
+    width: 80%;
+    height: 90px;
+}
