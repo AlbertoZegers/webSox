@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="stylesheet" href="../CSS/estilos.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    <header></header>
+    <form id="login-form" action="procesar_formulario.php" method="post">
+        <label for="username">Nombre de usuario:</label>
+        <input type="text" id="username" name="username"><br><br>
+        
+        <label for="password">Contraseña:</label>
+        <input type="password" id="password" name="password"><br><br>
+        
+        <input type="submit" value="Iniciar sesión">
+        
+        <p class="form-links">¿No tienes una cuenta? <a href="pagCrear.html">Crear usuario</a></p>
+        <p class="form-links"><a href="../home.html">Volver</a></p>
+      </form> 
+      <script src="../js/validador.js"></script>     
+</body>
+</html>
