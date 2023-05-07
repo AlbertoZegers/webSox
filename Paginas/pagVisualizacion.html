@@ -1,24 +1,38 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <link rel="stylesheet" href="../CSS/diseño2.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Agregar el CDN de Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <title>Visulizacion</title>
 </head>
-<body class="todo">
-    <header><h1>Bienvenido</h1></header>
-    <nav><a href="../home.html">Volver a la Pagina de Inicio</a></nav>
-    <div>
-        <form action="">
-            <p>Diccionario</p>
-            <input type="text" placeholder="Ingrese palabra">
-            <button>Enviar</button>
-        </form>
-        <div id="resultado">
+<body class="d-flex flex-column vh-100">
+    <header class="bg-secondary text-white p-2">
+        <h1>Bienvenido</h1>
+    </header>
+    <nav class="bg-light p-2">
+        <a href="../home.html">Volver a la Pagina de Inicio</a>
+    </nav>
+    <div class="d-flex flex-grow-1 justify-content-center align-items-center">
+        <div class="container">
+            <form class="bg-light p-3 rounded" action="">
+                <div class="form-group">
+                    <label for="palabra">Diccionario</label>
+                    <input type="text" class="form-control" id="palabra" placeholder="Ingrese palabra">
+                </div>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </form>
+            <div id="resultado" class="mt-3"></div>
         </div>
     </div>
-    <footer><a href="pagFeedback.html">Dejar Feedback</a></footer>
+    <footer class="bg-secondary text-white p-2 mt-auto">
+        <a href="pagFeedback.html" class="text-white">Dejar Feedback</a>
+    </footer>
+    <!-- Agregar el CDN de jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Agregar el CDN de Bootstrap -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>

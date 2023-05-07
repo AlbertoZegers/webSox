@@ -1,15 +1,34 @@
-.todo{
-    background-color: rebeccapurple;
+.todo {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
-header{
-    background-color: indigo;
+
+header {
+    text-align: center;
 }
-nav{
-    background-color: dimgray;
+
+nav {
+    text-align: center;
 }
-div{
-    background-color: yellow
+
+.container {
+    width: 100%;
+    max-width: 600px;
 }
-footer{
-    background-color: orange;
+
+form {
+    margin: 0 auto;
+}
+
+button {
+    margin-top: 10px;
+}
+
+#resultado {
+    text-align: center;
+}
+
+footer {
+    text-align: center;
 }

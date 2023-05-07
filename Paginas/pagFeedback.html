@@ -1,20 +1,31 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <link rel="stylesheet" href="../CSS/diseño2.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="../CSS/diseño_3.css">
+    
     <title>Feedback</title>
 </head>
-<body class="todo">
-    <header>Gracias por su apoyo</header>
+<body class="d-flex flex-column h-100">
+    <header class="mb-auto">Gracias por su apoyo</header>
     <nav><a href="pagVisualizacion.html">Volver al Menu</a></nav>
-    <div>
-        <form action="">
-            <input type="text" placeholder="Ingrese Feedback">
-            <button>Enviar</button>
+    <main class="container flex-grow-1 d-flex justify-content-center align-items-center">
+        <form class="form-inline">
+            <div class="form-group mx-sm-3 mb-2">
+                <label for="inputFeedback" class="sr-only">Ingrese Feedback</label>
+                <input type="text" class="form-control" id="inputFeedback" placeholder="Ingrese Feedback">
+            </div>
+            <button type="submit" class="btn btn-primary mb-2">Enviar</button>
         </form>
-    </div>    
+    </main>
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 </html>
