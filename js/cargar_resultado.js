@@ -2,6 +2,10 @@ $("#enviar").click(function(event) {
     event.preventDefault();
   
     var palabra = $("#palabra").val();
+    if (!isNaN(palabra)) {
+      alert("Por favor ingrese una palabra válida");
+      return;
+  }
     var url = "https://api.dictionaryapi.dev/api/v2/entries/en/" + palabra;
   
     fetch(url)
@@ -20,6 +24,8 @@ $("#enviar").click(function(event) {
           .append($ejemplo);
   
       })
-      .catch(error => console.error(error));
+      .catch(error => {
+        alert("Palabra no encontrada");
+        console.error(error);
+      });
   });
-  
