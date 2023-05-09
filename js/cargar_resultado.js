@@ -3,7 +3,10 @@ $("#enviar").click(function(event) {
   
     var palabra = $("#palabra").val();
     if (!isNaN(palabra)) {
-      alert("Por favor ingrese una palabra válida");
+      //alert("Por favor ingrese una palabra válida");
+      var $errorTipo = $("<h2>").text("Por favor ingrese una palabra válida");
+      $("#resultado").empty();
+      $('#resultado').append($errorTipo);
       return;
   }
     var url = "https://api.dictionaryapi.dev/api/v2/entries/en/" + palabra;
@@ -25,7 +28,10 @@ $("#enviar").click(function(event) {
   
       })
       .catch(error => {
-        alert("Palabra no encontrada");
+        //alert("Palabra no encontrada");
         console.error(error);
+        var $errorFound = $("<h2>").text("Palabra no encontrada");
+        $("#resultado").empty();
+        $('#resultado').append($errorFound);
       });
   });
