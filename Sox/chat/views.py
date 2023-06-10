@@ -1,0 +1,7 @@
+from django.shortcuts import render
+
+# Create your views here.
+def home(request):
+    return render(request, 'chat/home.html')
+def descripcion(request):
+    return render(request, 'chat/pagDescripcion.html')
