@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+    <script defer src="https://pyscript.net/latest/pyscript.js"></script> -->
     <title>Visulizacion</title>
 </head>
 <body class="d-flex flex-column vh-100">
@@ -18,6 +20,16 @@
     </nav>
     <div class="d-flex flex-grow-1 justify-content-center align-items-center">
         <div class="container">
+            <p>IA multifuncional Sox 0.3</p>
+            <p>(Escriba help para ver el manual de usuario)</p>
+            <!-- <p>cierre modulo IA si deceas cambiar de pagina</p>  -->
+            <form class="bg-light p-3 rounded" id="formulario">
+                <label for="campoTexto">Texto de entrada:</label>
+                <input type="text" id="campoTexto" name="texto" required>
+                <button id="btnEnviar">Enviar</button>
+            </form>
+            <div id="resultadoDiv"></div>
+            <!-- <div id="console"></div> -->
             <form class="bg-light p-3 rounded">
                 <div class="form-group">
                     <label for="palabra">Diccionario</label>
@@ -34,5 +46,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="{% static 'ia/js/cargar_resultado.js' %}"></script>
+    <script src="{% static 'ia/js/Sox.js' %}"></script>
+    <!-- <script src="{% static 'ia/js/desplegar_consola.js' %}"></script> -->
+    <!-- <py-script></py-script> -->
 </body>
 </html>
