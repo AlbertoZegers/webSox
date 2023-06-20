@@ -3,13 +3,9 @@
 {% block contenido %}
 
 <header></header>
-    <form id="login-form" action="procesar_formulario.php" method="post">
-        <label for="username">Nombre de usuario:</label>
-        <input type="text" id="username" name="username"><br><br>
-        
-        <label for="password">Contraseña:</label>
-        <input type="password" id="password" name="password"><br><br>
-        
+    <form id="login-form" method="post">
+      {% csrf_token %}
+      {{ form.as_p }}
         <input type="submit" value="Iniciar sesión">
         
         <p class="form-links">¿No tienes una cuenta? <a href="{% url 'crear' %}">Crear usuario</a></p>
