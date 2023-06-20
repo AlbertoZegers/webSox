@@ -1,17 +1,8 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    {% load static %}
-    <link rel="stylesheet" href="{% static 'usuario/CSS/estilos.css' %}">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+{% extends 'usuario/base.html' %}
 
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-</head>
-<body>
-    <header></header>
+{% block contenido %}
+
+<header></header>
     <form id="login-form" action="procesar_formulario.php" method="post">
         <label for="username">Nombre de usuario:</label>
         <input type="text" id="username" name="username"><br><br>
@@ -25,6 +16,5 @@
         <p class="form-links"><a href="{% url 'home' %}">Volver</a></p>
         <a href="{% url 'visualizacion' %}">Iniciar sin Cuenta</a>
       </form> 
-      <script src="{% static 'usuario/js/validador.js' %}"></script>     
-</body>
-</html>
+
+{% endblock %}

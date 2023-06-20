@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+    <script defer src="https://pyscript.net/latest/pyscript.js"></script> -->
+    <title>Visulizacion</title>
+</head>
+<body class="d-flex flex-column vh-100">
+    <header class="bg-secondary text-white p-2">
+        <h1>Bienvenido</h1>
+    </header>
+    <nav class="bg-light p-2">
+        <a href="{% url 'home' %}">Volver a la Pagina de Inicio</a>
+    </nav>
+    {% block contenido %}
+    {% endblock %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="{% static 'ia/js/cargar_resultado.js' %}"></script>
+    <script src="{% static 'ia/js/Sox.js' %}"></script>
+    <!-- <script src="{% static 'ia/js/desplegar_consola.js' %}"></script> -->
+    <!-- <py-script></py-script> -->
+</body>
+</html>

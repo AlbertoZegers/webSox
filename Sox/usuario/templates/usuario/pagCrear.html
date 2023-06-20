@@ -1,39 +1,28 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    {% load static %}
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    
-    <link rel="stylesheet" href="{% static 'usuario/CSS/estilos_2.css' %}">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SignIn</title>
-</head>
-<body>
-    <form id="registro-form" action="/registro" method="post">
-        <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="nombre" required>
-    
-        <label for="apellido">Apellido:</label>
-        <input type="text" id="apellido" name="apellido" required>
-    
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-    
-        <label for="username">Nombre de usuario:</label>
-        <input type="text" id="username" name="username" required>
-    
-        <label for="password">Contraseña:</label>
-        <input type="password" id="password" name="password" required>
-    
-        <label for="confirm_password">Confirmar contraseña:</label>
-        <input type="password" id="confirm_password" name="confirm_password" required>
-    
-        <input type="submit" value="Registrarse">
-        <p class="form-links"><a href="{% url 'login' %}">Volver</a></p>
-      </form>
-    
-      <script src="{% static 'usuario/js/validador_2.js' %}"></script>
-</body>
-</html>
+{% extends 'usuario/base.html' %}
+
+{% block contenido %}
+
+<form id="registro-form" action="/registro" method="post">
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" required>
+
+    <label for="apellido">Apellido:</label>
+    <input type="text" id="apellido" name="apellido" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="username">Nombre de usuario:</label>
+    <input type="text" id="username" name="username" required>
+
+    <label for="password">Contraseña:</label>
+    <input type="password" id="password" name="password" required>
+
+    <label for="confirm_password">Confirmar contraseña:</label>
+    <input type="password" id="confirm_password" name="confirm_password" required>
+
+    <input type="submit" value="Registrarse">
+    <p class="form-links"><a href="{% url 'login' %}">Volver</a></p>
+  </form>
+
+{% endblock %}
