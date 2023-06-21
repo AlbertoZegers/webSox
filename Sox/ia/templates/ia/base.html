@@ -16,7 +16,17 @@
         <h1>Bienvenido</h1>
     </header>
     <nav class="bg-light p-2">
-        <a href="{% url 'home' %}">Volver a la Pagina de Inicio</a>
+        {% if user.is_authenticated %}
+        <ul>
+            <li>
+                <a href="{% url 'logout' %}">Volver a la Pagina de Inicio</a>
+            </li>
+            <li>
+                <a href="#">@{{ user.username }}</a>
+            </li>
+        </ul>
+        {% endif %}
+        
     </nav>
     {% block contenido %}
     {% endblock %}

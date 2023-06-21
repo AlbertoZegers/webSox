@@ -22,4 +22,5 @@ urlpatterns = [
     path('', include('chat.urls')),
     path('ia/', include('ia.urls')),
     path('ingreso/', include('usuario.urls')),
+    path('accounts/', include('django.contrib.auth.urls'), name="login")
 ]
