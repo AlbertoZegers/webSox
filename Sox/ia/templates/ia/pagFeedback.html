@@ -16,17 +16,29 @@
     <header class="mb-auto">Gracias por su apoyo</header>
     <nav><a href="{% url 'visualizacion' %}">Volver al Menu</a></nav>
     <main class="container flex-grow-1 d-flex justify-content-center align-items-center">
-        <form class="form-inline">
-            <div class="form-group mx-sm-3 mb-2">
-                <label for="inputFeedback" class="sr-only">Ingrese Feedback</label>
-                <input type="text" class="form-control" id="inputFeedback" placeholder="Ingrese Feedback">
-            </div>
+        <form method="post">
             {% csrf_token %}
-            {{ form }}
-            <button type="submit" class="btn btn-primary mb-2">Enviar</button>
+            {{ form.as_p }}
+            <button type="submit" class="btn btn-primary mb-2 ml-2">Enviar</button>
         </form>
     </main>
-    
+    <table class="table table-striped table-hover table-responsive-sm">
+        <tr>
+            <th>Comentario</th>
+            <th>Usuario</th>
+            <th>Opciones</th>
+        </tr>
+        {% for c in comentarios %}
+        <tr>
+            <td>{{ c.mensaje }}</td>
+            <td>{{ c.usuario }}</td>
+            <td>
+                <a href="{% url 'modificar' c.id %}" class="btn btn-info btn-sm">modificar</a>
+                <a href="{% url 'eliminar' c.id %}" class="btn btn-danger btn-sm">eliminar</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.1/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
