@@ -22,14 +22,14 @@ def visualizacion(request):
 
 def modificar(request, id):
     comentario=get_object_or_404(Comentario, id=id)
-    data = {'form': ComentarioForm(instance=comentario)}
+    data = {'form': ComentarioForm(instance=comentario, initial={'usuario': request.user})}
     if request.method=='POST':
-        formulario= ComentarioForm(data=request.POST, instance=comentario, request=request)
+        formulario= ComentarioForm(data=request.POST, instance=comentario)
         if formulario.is_valid():
             formulario.save()
             return redirect('feedback')
         else:
-           formulario=ComentarioForm(request=request) 
+           formulario=ComentarioForm() 
     return render(request, 'ia/modificar.html', data)
 
 def eliminar(request, id):
