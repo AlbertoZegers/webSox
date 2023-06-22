@@ -21,6 +21,8 @@
                 <label for="inputFeedback" class="sr-only">Ingrese Feedback</label>
                 <input type="text" class="form-control" id="inputFeedback" placeholder="Ingrese Feedback">
             </div>
+            {% csrf_token %}
+            {{ form }}
             <button type="submit" class="btn btn-primary mb-2">Enviar</button>
         </form>
     </main>
