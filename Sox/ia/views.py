@@ -6,7 +6,7 @@ from .models import Comentario
 # Create your views here.
 def feedback(request):
     comentarios=Comentario.objects.all()
-    data = {'form' : ComentarioForm(), 'comentarios': comentarios}
+    data = {'form' : ComentarioForm(initial={'usuario': request.user}), 'comentarios': comentarios}
     if request.method == 'POST':
          formulario=ComentarioForm(data=request.POST)
          if formulario.is_valid():
@@ -24,12 +24,12 @@ def modificar(request, id):
     comentario=get_object_or_404(Comentario, id=id)
     data = {'form': ComentarioForm(instance=comentario)}
     if request.method=='POST':
-        formulario= ComentarioForm(data=request.POST, instance=comentario)
+        formulario= ComentarioForm(data=request.POST, instance=comentario, request=request)
         if formulario.is_valid():
             formulario.save()
             return redirect('feedback')
         else:
-           formulario=ComentarioForm() 
+           formulario=ComentarioForm(request=request) 
     return render(request, 'ia/modificar.html', data)
 
 def eliminar(request, id):

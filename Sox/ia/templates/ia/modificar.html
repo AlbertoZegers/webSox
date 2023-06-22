@@ -10,11 +10,11 @@
     
     <link rel="stylesheet" href="{% static 'ia/CSS/diseño_3.css' %}">
     
-    <title>Feedback</title>
+    <title>Modificar Feedback</title>
 </head>
 <body class="d-flex flex-column h-100">
     <header class="mb-auto">Gracias por su apoyo</header>
-    <nav><a href="{% url 'visualizacion' %}">Volver al Menu</a></nav>
+    <nav><a href="{% url 'feedback' %}">Volver</a></nav>
     <main class="container flex-grow-1 d-flex justify-content-center align-items-center">
         <form method="post">
             {% csrf_token %}
